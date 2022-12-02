@@ -1,0 +1,35 @@
+from turtle import *
+
+# Повтори 4 [Вперёд 9 Направо 90]
+# Повтори 3 [Вперёд 9 Направо 120]
+
+left(90)
+color("black", "red")
+m = 1
+right(60)
+
+begin_fill()
+
+
+for _ in range(4):
+    forward(9*m)
+    right(90)
+
+
+for m in range(3):
+    forward(9*m)
+    right(120)
+
+end_fill()
+
+
+canv = getcanvas()
+count = 0
+
+for x in range(-100*m, 100*m, m):
+    for y in range(-100*m, 100*m, m):
+        item = canv.find_overlapping(x, y, x, y)
+        if len(item) == 1 and item[0] == 5:
+            count += 1
+
+print(count)
