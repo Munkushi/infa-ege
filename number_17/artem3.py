@@ -1,4 +1,4 @@
-z = open("number_17/17_3.txt").readlines()
+z = open("number_17/17_3_3.txt").readlines()
 z = [int(_) for _ in z]
 
 count = 0
@@ -11,4 +11,4 @@ for i in range(len(z) - 1):
             max_ = max(max_, z[i] + z[j])
 
 
-print(count, max_)   
+print(count, max_)
